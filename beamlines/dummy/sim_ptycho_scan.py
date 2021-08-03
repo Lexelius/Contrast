@@ -85,4 +85,4 @@ class Dummy_Ptycho(object):
 
         # tell the recorders that the scan is over
         for r in active_recorders():
-            r.queue.put(RecorderFooter())
+            r.queue.put(RecorderFooter(scannr=self.scannr, path=env.paths.directory))
